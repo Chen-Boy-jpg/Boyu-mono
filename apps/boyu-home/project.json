@@ -3,6 +3,28 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/boyu-home",
   "projectType": "application",
-  "targets": {},
-  "tags": []
+  "targets": {
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "acme:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "boyu-home:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "boyu-home:build:production",
+          "dev": false
+        }
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": [
+    "boyu-home-lib"
+  ]
 }

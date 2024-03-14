@@ -1,0 +1,8 @@
+{
+  "name": "boyu-home-lib",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/boyu-home-lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {}
+}
